@@ -19,13 +19,13 @@
 	<config>
 		<fields name="params">
 		<fieldset name="basic">
-			<field name="position" type="radio" default="after" label="TM_POSITION" description="TM_POSITION_DESC">
+			<field name="position" type="radio" default="after" class="btn-group" label="TM_POSITION" description="TM_POSITION_DESC">
 				<option value="before">TM_BEFORE</option>
 				<option value="after">TM_AFTER</option>
 			</field>
-			<field name="frontpage" type="radio" default="1" label="TM_FRONTPAGE" description="TM_FRONTPAGE_DESC">
-				<option value="1">TM_YES</option>
-				<option value="0">TM_NO</option>
+			<field name="frontpage" type="radio" default="1" class="btn-group" label="TM_FRONTPAGE" description="TM_FRONTPAGE_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
 			</field>
 			<field name="separator" type="text" default="{s}-{s}" label="TM_SEPARATOR" description="TM_SEPARATOR_DESC" />
 			<field name="sitename" type="text" default="" label="TM_ALTERNATIVE" description="TM_ALTERNATIVE_DESC" />
