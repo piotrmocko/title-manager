@@ -27,10 +27,12 @@ class plgSystemTitlemanager extends JPlugin
 			return;
 		}
 
-		$params   = $this->params;
-		$document = JFactory::getDocument();
-		$menu     = $app->getMenu();
-		$is_frontpage = ($menu->getActive() == $menu->getDefault());
+		$params   	= $this->params;
+		$document 	= JFactory::getDocument();
+		$lang_code 	= $app->getLanguageFilter() ? JFactory::getLanguage()->getTag() : null;
+		$menu 		= $app->getMenu();
+		$active_menu 	= $menu->getActive();
+		$is_frontpage 	= ($active_menu->id == $menu->getDefault($lang_code)->id AND $active_menu->query['view'] == $app->input->getCmd('view'));
 		
 		$sitename = $params->get('sitename') ? $params->get('sitename') : $app->getCfg('sitename');
 		if ($is_frontpage) {
